@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+
+	<link rel="stylesheet" href="style.css" />
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script>
+		
+		var savingsCalculator_meters,
+			savingsCalculator_fieldiesCost,
+			savingsCalculator_fieldiesNumber,
+			savingsCalculator_boxesNumber,
+			savingsCalculator_efficiency,
+			savingsCalculator_errorRate;
+		
+	
+		function dynamicsCalculateSavings(){
+			
+			
+			if(!(savingsCalculator_meters || savingsCalculator_fieldiesCost || savingsCalculator_fieldiesNumber || savingsCalculator_boxesNumber || savingsCalculator_efficiency || savingsCalculator_errorRate)){
+				
+				return false;
+				
+			}
+				
+			
+		}
+	
+	</script>
+	
+</head>
+
+<body>
+	
+	<div class="dynamics-savings-calculator">
+		
+		<div class="col col1">
+			
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Meters</label>
+					<input id="savingsCalculator_meters" onChange="savingsCalculator_meters = this.value" type="range" min="1" max="100000" value="20000" class="slider">		
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_meters_text" onChange="savingsCalculator_meters = this.value" type="number" value="20000">
+					<label>mts</label>
+				
+				</div>
+				
+			</div>
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Cost of fieldies</label>
+					<input id="savingsCalculator_fieldiesCost" onChange="savingsCalculator_fieldiesCost = this.value" type="range" min="1" max="1000" value="100" class="slider">
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_fieldiesCost_text" onChange="savingsCalculator_fieldiesCost = this.value" type="number" value="100">
+					<label>AUD / Day / Tech</label>
+				
+				</div>
+				
+			</div>
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Number of fieldies</label>
+					<input id="savingsCalculator_fieldiesNumber" onChange="savingsCalculator_fieldiesNumber = this.value" type="range" min="1" max="1000" value="20" class="slider">		
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_fieldiesNumber_text" onChange="savingsCalculator_fieldiesNumber = this.value" type="number" value="20">
+					<label>fieldies</label>
+				
+				</div>
+				
+			</div>
+			
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Number of boxes without Imago</label>
+					<input id="savingsCalculator_boxesNumber" onChange="savingsCalculator_boxesNumber = this.value" type="range" min="1" max="1000" value="10" class="slider">
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_boxesNumber_text" onChange="savingsCalculator_boxesNumber = this.value" type="number" value="10">
+					<label>pcs</label>
+					
+				</div>
+				
+			</div>
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Improved Efficiency of Imago + Tru Identiti 100%</label>
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_efficiency" onChange="savingsCalculator_efficiency = this.value" type="number" value="">
+					<label>%</label>
+				
+				</div>
+				
+			</div>
+			
+			<div class="dynamics-savings-calculator-field">
+				
+				<div class="field-col field-col-1">
+					
+					<label>Percent of error introduced by manual processing</label>
+					
+				</div>
+				
+				<div class="field-col field-col-2">
+					
+					<input id="savingsCalculator_errorRate" onChange="savingsCalculator_errorRate = this.value" type="number" value="">
+					<label>%</label>
+				
+				</div>
+				
+		  	</div>
+			
+			<p></p>
+			
+			<input type="submit" value="Get results">
+			
+			
+		</div>
+		
+		<div class="col col2">
+			
+			<h2>Results</h2>
+			
+			<div class="dynamics-savings-calculator-result">
+				<span class="dynamics-savings-calculator-result-label">Cost to Image without Imago</span>
+				<span class="dynamics-savings-calculator-result-value">0</span>
+			</div>
+			
+			<div class="dynamics-savings-calculator-result">
+				<span class="dynamics-savings-calculator-result-label">Cost to Image with Imago</span>
+				<span class="dynamics-savings-calculator-result-value">0</span>
+			</div>
+			
+			<div class="dynamics-savings-calculator-result">
+				<span class="dynamics-savings-calculator-result-label">Images that are missing or incorrectly taken without Imago</span>
+				<span class="dynamics-savings-calculator-result-value">0</span>
+			</div>
+			
+			<div class="dynamics-savings-calculator-result">
+				<span class="dynamics-savings-calculator-result-label">Money wasted</span>
+				<span class="dynamics-savings-calculator-result-value">0</span>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>
