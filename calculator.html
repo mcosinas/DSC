@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>Calculator</title>
 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="style.css" />
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -18,12 +20,12 @@
 		
 		<div class="col col1">
 			
-			
+			<label>Meters</label>
+
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<label>Meters</label>
 					<input id="savingsCalculator_meters" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="100000" value="0">		
 					
 				</div>
@@ -36,12 +38,13 @@
 				</div>
 				
 			</div>
+
+			<label>Cost of fieldies</label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<label>Cost of fieldies</label>
 					<input id="savingsCalculator_fieldiesCost" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >
 					
 				</div>
@@ -54,12 +57,13 @@
 				</div>
 				
 			</div>
+
+			<label>Number of fieldies</label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<label>Number of fieldies</label>
 					<input id="savingsCalculator_fieldiesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >		
 					
 				</div>
@@ -73,12 +77,12 @@
 				
 			</div>
 			
+			<label>Number of boxes without Imago</label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<label>Number of boxes without Imago</label>
 					<input id="savingsCalculator_boxesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >
 					
 				</div>
@@ -92,7 +96,7 @@
 				
 			</div>
 			
-			<div class="dynamics-savings-calculator-field">
+			<div class="dynamics-savings-calculator-field dynamics-savings-calculator-field-sep">
 				
 				<div class="field-col field-col-1">
 					
@@ -102,14 +106,14 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_efficiency" class="dynamicsCalculatorTextField" type="number" value="0">
+					<input id="savingsCalculator_efficiency" class="dynamicsCalculatorTextField" type="number" value="15">
 					<label>%</label>
 				
 				</div>
 				
 			</div>
 			
-			<div class="dynamics-savings-calculator-field">
+			<div class="dynamics-savings-calculator-field dynamics-savings-calculator-field-sep">
 				
 				<div class="field-col field-col-1">
 					
@@ -119,14 +123,17 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_errorRate" class="dynamicsCalculatorTextField" type="number" value="0">
+					<input id="savingsCalculator_errorRate" class="dynamicsCalculatorTextField" type="number" value="5">
 					<label>%</label>
 				
 				</div>
 				
 		  	</div>
 			
-			<p></p>
+			<div class="dynamics-calculator-error-message">
+				<p>Please check the fields then try again.</p>
+			</div>
+
 			
 			<input type="button" class="calculate" value="Get results">
 			

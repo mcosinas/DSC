@@ -2,10 +2,7 @@
 	box-sizing:border-box;
 }
 
-
-.dynamics-savings-calculator input {margin-bottom:1.5em; max-width:100%;}
-
-		.slider {margin-bottom:2.5em;}
+.slider {margin-bottom:2.5em;}
 		
 		.slidecontainer {
   width: 100%;
@@ -50,19 +47,38 @@
 			align-items:stretch;
 			background-color:#fff;
 			border-radius:40px;
-			width:1050px;
+			width:1200px;
 			max-width:100%;
 			margin:50px auto 0;
 			overflow:hidden;
 			box-shadow: 0px 0px 30px -6px #ccc;
+			font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+			font-size:16px;
+			line-height:1.4em;
 			
 		}
+
+		.dynamics-savings-calculator input {margin-bottom:1.5em; max-width:100%;}
+		
 		
 		.dynamics-savings-calculator .col {
 			
 			flex: 1 1 50%;
-			padding:2.5em;
+			padding:3em 2em;
 			
+		}
+
+		.dynamics-savings-calculator .col1 label {
+
+			display:block;
+			font-size:13px;
+		
+		}
+		
+		.dynamics-savings-calculator .col1 > label {
+		
+			margin-bottom:5px;
+		
 		}
 		
 		.dynamics-savings-calculator .col2 {
@@ -72,12 +88,23 @@
 			
 		}
 		
-		.dynamics-savings-calculator .col2 h2 {margin-top:0;}
+		.dynamics-savings-calculator .col2 h2 {margin-top:0; font-size:32px;}
 		
 		.dynamics-savings-calculator-result span {
 			
 			display:block;
 			
+		}
+
+		.dynamics-savings-calculator-result-label {
+			font-size:13px;
+			line-height:1;
+		}
+		.dynamics-savings-calculator-result-value {
+			font-size: 48px;
+			line-height: 1;
+			margin-bottom: 20px;
+			font-weight:300;
 		}
 
 .dynamics-savings-calculator-field {
@@ -87,7 +114,12 @@
 	display:flex;
 	-webkit-align-items:center;
 	align-items:center;
+	margin-bottom:10px;
 	
+}
+
+.dynamics-savings-calculator-field-sep {
+	margin:2em 0;
 }
 
 .dynamics-savings-calculator-field .field-col-1 {
@@ -98,6 +130,7 @@
 	width:60%;
 	
 }
+
 
 .dynamics-savings-calculator-field .field-col-2 {
 	
@@ -138,4 +171,38 @@
 	display:block;
 	
 	
+}
+
+.dynamics-calculator-error-message {
+	display:none;
+	color:#f00;
+	font-size:14px;
+	text-align:center;
+}
+.dynamics-savings-calculator.error .dynamics-calculator-error-message {
+	display:block;
+}
+
+.dynamics-savings-calculator .calculate {
+	background-color:#ff8c00;
+	-webkit-appearance: none;
+	appearance: none;
+	color:#fff;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	display:block;
+	width:100%;
+	text-align:center;
+	font-size:18px;
+	padding:20px;
+	border:none;
+	border-radius:50px;
+	cursor:pointer;
+	margin:2em 0 0 0;
+}
+
+.dynamics-savings-calculator .calculate:hover,
+.dynamics-savings-calculator .calculate:focus {
+	outline:none;
+	background-color:#ff991d;
 }

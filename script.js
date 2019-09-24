@@ -4,8 +4,8 @@ $(document).ready(function(){
         savingsCalculator_fieldiesCost = 0,
         savingsCalculator_fieldiesNumber = 0,
         savingsCalculator_boxesNumber = 0,
-        savingsCalculator_efficiency = 0,
-        savingsCalculator_errorRate = 0;
+        savingsCalculator_efficiency = 15,
+        savingsCalculator_errorRate = 5;
 
     var $savingsCalculator_meters,
         $savingsCalculator_fieldiesCost,
@@ -43,11 +43,11 @@ $(document).ready(function(){
 
         if(results.CIwI == undefined || results.CII == undefined || results.incorrect == undefined || results.moneyWasted == undefined) return false;
     
-        if($resultCIwI.length) $resultCIwI.text(Math.round(results.CIwI));
-        if($resultCII.length) $resultCII.text(Math.round(results.CII));
-        if($resultIncorrect.length) $resultIncorrect.text(Math.round(results.incorrect));
-        if($resultMoneyWasted.length) $resultMoneyWasted.text(Math.round(results.moneyWasted));
-        if($resultExpectedSavings.length) $resultExpectedSavings.text(Math.round(results.CIwI - results.CII));
+        if($resultCIwI.length) $resultCIwI.text(Math.round(results.CIwI).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if($resultCII.length) $resultCII.text(Math.round(results.CII).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if($resultIncorrect.length) $resultIncorrect.text(Math.round(results.incorrect).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if($resultMoneyWasted.length) $resultMoneyWasted.text(Math.round(results.moneyWasted).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if($resultExpectedSavings.length) $resultExpectedSavings.text(Math.round(results.CIwI - results.CII).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         
     
         return true;
@@ -146,9 +146,12 @@ $(document).ready(function(){
 
             var updateResult = dynamicsCalculatorUpdateResults(results);
 
-            if(!updateResult) dynamicsCalculatorClearResults();
+            if(!updateResult){
 
-            $dynamicsSavingsCalculator.addClass("error");
+                dynamicsCalculatorClearResults();
+                $dynamicsSavingsCalculator.addClass("error");
+
+            }
 
         }else{
 
