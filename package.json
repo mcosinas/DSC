@@ -1,0 +1,26 @@
+{
+  "name": "dynamics_calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcosinas/DSC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcosinas/DSC/issues"
+  },
+  "homepage": "https://github.com/mcosinas/DSC#readme",
+  "dependencies": {
+    "@node-minify/cli": "^4.1.2",
+    "@node-minify/uglify-js": "^4.1.2",
+    "gcc": "^1.0.2",
+    "node-minify": "^3.6.0",
+    "uglify-js": "^3.6.0"
+  }
+}

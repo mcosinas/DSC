@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,75 +8,7 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
-	<script>
-		
-		var savingsCalculator_meters = 0,
-			savingsCalculator_fieldiesCost = 0,
-			savingsCalculator_fieldiesNumber = 0,
-			savingsCalculator_boxesNumber = 0,
-			savingsCalculator_efficiency = 0,
-			savingsCalculator_errorRate = 0;
-
-		var $savingsCalculator_meters,
-			$savingsCalculator_fieldiesCost,
-			$savingsCalculator_fieldiesNumber,
-			$savingsCalculator_boxesNumber,
-			$savingsCalculator_efficiency,
-			$savingsCalculator_errorRate;
-
-		var $savingsCalculator_meters_text,
-			$savingsCalculator_fieldiesCost_text,
-			$savingsCalculator_fieldiesNumber_text,
-			$savingsCalculator_boxesNumber_text;
-
-		$(document).ready(function(){
-
-			$savingsCalculator_meters = $("#savingsCalculator_meters"),
-			$savingsCalculator_fieldiesCost = $("#savingsCalculator_fieldiesCost"),
-			$savingsCalculator_fieldiesNumber = $("#savingsCalculator_fieldiesNumber"),
-			$savingsCalculator_boxesNumber = $("#savingsCalculator_boxesNumber"),
-			$savingsCalculator_efficiency = $("#savingsCalculator_efficiency"),
-			$savingsCalculator_errorRate = $("#savingsCalculator_errorRate");
-
-			$savingsCalculator_meters_text = $("#savingsCalculator_meters_text"),
-			$savingsCalculator_fieldiesCost_text = $("#savingsCalculator_fieldiesCost_text"),
-			$savingsCalculator_fieldiesNumber_text = $("#savingsCalculator_fieldiesNumber_text"),
-			$savingsCalculator_boxesNumber_text = $("#savingsCalculator_boxesNumber_text");
-
-		});
-		
-	
-		function dynamicsCalculateSavings(){
-			
-			
-			if(!(savingsCalculator_meters || savingsCalculator_fieldiesCost || savingsCalculator_fieldiesNumber || savingsCalculator_boxesNumber || savingsCalculator_efficiency || savingsCalculator_errorRate)){
-				
-				return false;
-				
-			}
-				
-			
-		}
-
-		function dynamicsUpdateCalculatorTextFields(){
-
-			if($savingsCalculator_meters_text[0] != undefined) $savingsCalculator_meters_text[0].value = savingsCalculator_meters;
-			if($savingsCalculator_fieldiesCost_text[0] != undefined) $savingsCalculator_fieldiesCost_text[0].value = savingsCalculator_fieldiesCost;
-			if($savingsCalculator_fieldiesNumber_text[0] != undefined) $savingsCalculator_fieldiesNumber_text[0].value = savingsCalculator_fieldiesNumber;
-			if($savingsCalculator_boxesNumber_text[0] != undefined) $savingsCalculator_boxesNumber_text[0].value = savingsCalculator_boxesNumber;
-
-		}
-
-		function dynamicsUpdateCalculatorSliders(){
-
-			if($savingsCalculator_meters[0] != undefined) $savingsCalculator_meters[0].value = savingsCalculator_meters;
-			if($savingsCalculator_fieldiesCost[0] != undefined) $savingsCalculator_fieldiesCost[0].value = savingsCalculator_fieldiesCost;
-			if($savingsCalculator_fieldiesNumber[0] != undefined) $savingsCalculator_fieldiesNumber[0].value = savingsCalculator_fieldiesNumber;
-			if($savingsCalculator_boxesNumber[0] != undefined) $savingsCalculator_boxesNumber[0].value = savingsCalculator_boxesNumber;
-
-		}
-	
-	</script>
+	<script src="script.min.js"></script>
 	
 </head>
 
@@ -92,13 +24,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Meters</label>
-					<input id="savingsCalculator_meters" onChange="savingsCalculator_meters = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="100000" value="0" class="slider">		
+					<input id="savingsCalculator_meters" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="100000" value="0">		
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_meters_text" onChange="savingsCalculator_meters = this.value; dynamicsUpdateCalculatorSliders();" type="number" value="0">
+					<input id="savingsCalculator_meters_text" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>mts</label>
 				
 				</div>
@@ -110,13 +42,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Cost of fieldies</label>
-					<input id="savingsCalculator_fieldiesCost" onChange="savingsCalculator_fieldiesCost = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">
+					<input id="savingsCalculator_fieldiesCost" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_fieldiesCost_text" onChange="savingsCalculator_fieldiesCost = this.value; dynamicsUpdateCalculatorSliders();" type="number" value="0">
+					<input id="savingsCalculator_fieldiesCost_text" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>AUD / Day / Tech</label>
 				
 				</div>
@@ -128,13 +60,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Number of fieldies</label>
-					<input id="savingsCalculator_fieldiesNumber" onChange="savingsCalculator_fieldiesNumber = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">		
+					<input id="savingsCalculator_fieldiesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >		
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_fieldiesNumber_text" onChange="savingsCalculator_fieldiesNumber = this.value; dynamicsUpdateCalculatorSliders();" type="number" value="0">
+					<input id="savingsCalculator_fieldiesNumber_text" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>fieldies</label>
 				
 				</div>
@@ -147,13 +79,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Number of boxes without Imago</label>
-					<input id="savingsCalculator_boxesNumber" onChange="savingsCalculator_boxesNumber = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">
+					<input id="savingsCalculator_boxesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="1000" value="0" >
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_boxesNumber_text" onChange="savingsCalculator_boxesNumber = this.value; dynamicsUpdateCalculatorSliders();" type="number" value="0">
+					<input id="savingsCalculator_boxesNumber_text" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>pcs</label>
 					
 				</div>
@@ -170,7 +102,7 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_efficiency" onChange="savingsCalculator_efficiency = this.value" type="number" value="0">
+					<input id="savingsCalculator_efficiency" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>%</label>
 				
 				</div>
@@ -187,7 +119,7 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_errorRate" onChange="savingsCalculator_errorRate = this.value" type="number" value="0">
+					<input id="savingsCalculator_errorRate" class="dynamicsCalculatorTextField" type="number" value="0">
 					<label>%</label>
 				
 				</div>
@@ -196,7 +128,7 @@
 			
 			<p></p>
 			
-			<input type="button" value="Get results">
+			<input type="button" class="calculate" value="Get results">
 			
 			
 		</div>
@@ -207,22 +139,27 @@
 			
 			<div class="dynamics-savings-calculator-result">
 				<span class="dynamics-savings-calculator-result-label">Cost to Image without Imago</span>
-				<span class="dynamics-savings-calculator-result-value">0</span>
+				<span id="dynamics-savings-calculator-result-CIwI" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 			<div class="dynamics-savings-calculator-result">
 				<span class="dynamics-savings-calculator-result-label">Cost to Image with Imago</span>
-				<span class="dynamics-savings-calculator-result-value">0</span>
+				<span id="dynamics-savings-calculator-result-CII" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 			<div class="dynamics-savings-calculator-result">
 				<span class="dynamics-savings-calculator-result-label">Images that are missing or incorrectly taken without Imago</span>
-				<span class="dynamics-savings-calculator-result-value">0</span>
+				<span id="dynamics-savings-calculator-result-incorrect" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 			<div class="dynamics-savings-calculator-result">
 				<span class="dynamics-savings-calculator-result-label">Money wasted</span>
-				<span class="dynamics-savings-calculator-result-value">0</span>
+				<span id="dynamics-savings-calculator-result-moneyWasted" class="dynamics-savings-calculator-result-value">--</span>
+			</div>
+
+			<div class="dynamics-savings-calculator-result">
+				<span class="dynamics-savings-calculator-result-label">Expected Savings</span>
+				<span id="dynamics-savings-calculator-result-expectedSavings" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 		</div>
