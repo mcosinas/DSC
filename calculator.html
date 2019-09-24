@@ -10,12 +10,40 @@
 	
 	<script>
 		
-		var savingsCalculator_meters,
-			savingsCalculator_fieldiesCost,
-			savingsCalculator_fieldiesNumber,
-			savingsCalculator_boxesNumber,
-			savingsCalculator_efficiency,
-			savingsCalculator_errorRate;
+		var savingsCalculator_meters = 0,
+			savingsCalculator_fieldiesCost = 0,
+			savingsCalculator_fieldiesNumber = 0,
+			savingsCalculator_boxesNumber = 0,
+			savingsCalculator_efficiency = 0,
+			savingsCalculator_errorRate = 0;
+
+		var $savingsCalculator_meters,
+			$savingsCalculator_fieldiesCost,
+			$savingsCalculator_fieldiesNumber,
+			$savingsCalculator_boxesNumber,
+			$savingsCalculator_efficiency,
+			$savingsCalculator_errorRate;
+
+		var $savingsCalculator_meters_text,
+			$savingsCalculator_fieldiesCost_text,
+			$savingsCalculator_fieldiesNumber_text,
+			$savingsCalculator_boxesNumber_text;
+
+		$(document).ready(function(){
+
+			$savingsCalculator_meters = $("#savingsCalculator_meters"),
+			$savingsCalculator_fieldiesCost = $("#savingsCalculator_fieldiesCost"),
+			$savingsCalculator_fieldiesNumber = $("#savingsCalculator_fieldiesNumber"),
+			$savingsCalculator_boxesNumber = $("#savingsCalculator_boxesNumber"),
+			$savingsCalculator_efficiency = $("#savingsCalculator_efficiency"),
+			$savingsCalculator_errorRate = $("#savingsCalculator_errorRate");
+
+			$savingsCalculator_meters_text = $("#savingsCalculator_meters_text"),
+			$savingsCalculator_fieldiesCost_text = $("#savingsCalculator_fieldiesCost_text"),
+			$savingsCalculator_fieldiesNumber_text = $("#savingsCalculator_fieldiesNumber_text"),
+			$savingsCalculator_boxesNumber_text = $("#savingsCalculator_boxesNumber_text");
+
+		});
 		
 	
 		function dynamicsCalculateSavings(){
@@ -28,6 +56,15 @@
 			}
 				
 			
+		}
+
+		function dynamicsUpdateCalculatorTextFields(){
+
+			if($savingsCalculator_meters_text[0] != undefined) $savingsCalculator_meters_text[0].value = savingsCalculator_meters;
+			if($savingsCalculator_fieldiesCost_text[0] != undefined) $savingsCalculator_fieldiesCost_text[0].value = savingsCalculator_fieldiesCost;
+			if($savingsCalculator_fieldiesNumber_text[0] != undefined) $savingsCalculator_fieldiesNumber_text[0].value = savingsCalculator_fieldiesNumber;
+			if($savingsCalculator_boxesNumber_text[0] != undefined) $savingsCalculator_boxesNumber_text[0].value = savingsCalculator_boxesNumber;
+
 		}
 	
 	</script>
@@ -46,13 +83,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Meters</label>
-					<input id="savingsCalculator_meters" onChange="savingsCalculator_meters = this.value" type="range" min="1" max="100000" value="20000" class="slider">		
+					<input id="savingsCalculator_meters" onChange="savingsCalculator_meters = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="100000" value="0" class="slider">		
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_meters_text" onChange="savingsCalculator_meters = this.value" type="number" value="20000">
+					<input id="savingsCalculator_meters_text" onChange="savingsCalculator_meters = this.value;" type="number" value="0">
 					<label>mts</label>
 				
 				</div>
@@ -64,13 +101,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Cost of fieldies</label>
-					<input id="savingsCalculator_fieldiesCost" onChange="savingsCalculator_fieldiesCost = this.value" type="range" min="1" max="1000" value="100" class="slider">
+					<input id="savingsCalculator_fieldiesCost" onChange="savingsCalculator_fieldiesCost = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_fieldiesCost_text" onChange="savingsCalculator_fieldiesCost = this.value" type="number" value="100">
+					<input id="savingsCalculator_fieldiesCost_text" onChange="savingsCalculator_fieldiesCost = this.value;" type="number" value="0">
 					<label>AUD / Day / Tech</label>
 				
 				</div>
@@ -82,13 +119,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Number of fieldies</label>
-					<input id="savingsCalculator_fieldiesNumber" onChange="savingsCalculator_fieldiesNumber = this.value" type="range" min="1" max="1000" value="20" class="slider">		
+					<input id="savingsCalculator_fieldiesNumber" onChange="savingsCalculator_fieldiesNumber = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">		
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_fieldiesNumber_text" onChange="savingsCalculator_fieldiesNumber = this.value" type="number" value="20">
+					<input id="savingsCalculator_fieldiesNumber_text" onChange="savingsCalculator_fieldiesNumber = this.value" type="number" value="0">
 					<label>fieldies</label>
 				
 				</div>
@@ -101,13 +138,13 @@
 				<div class="field-col field-col-1">
 					
 					<label>Number of boxes without Imago</label>
-					<input id="savingsCalculator_boxesNumber" onChange="savingsCalculator_boxesNumber = this.value" type="range" min="1" max="1000" value="10" class="slider">
+					<input id="savingsCalculator_boxesNumber" onChange="savingsCalculator_boxesNumber = this.value; dynamicsUpdateCalculatorTextFields();" type="range" min="1" max="1000" value="0" class="slider">
 					
 				</div>
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_boxesNumber_text" onChange="savingsCalculator_boxesNumber = this.value" type="number" value="10">
+					<input id="savingsCalculator_boxesNumber_text" onChange="savingsCalculator_boxesNumber = this.value" type="number" value="0">
 					<label>pcs</label>
 					
 				</div>
@@ -124,7 +161,7 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_efficiency" onChange="savingsCalculator_efficiency = this.value" type="number" value="">
+					<input id="savingsCalculator_efficiency" onChange="savingsCalculator_efficiency = this.value" type="number" value="0">
 					<label>%</label>
 				
 				</div>
@@ -141,7 +178,7 @@
 				
 				<div class="field-col field-col-2">
 					
-					<input id="savingsCalculator_errorRate" onChange="savingsCalculator_errorRate = this.value" type="number" value="">
+					<input id="savingsCalculator_errorRate" onChange="savingsCalculator_errorRate = this.value" type="number" value="0">
 					<label>%</label>
 				
 				</div>
