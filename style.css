@@ -123,7 +123,7 @@
 
 		.dynamics-savings-calculator-result-label {
 			font-size:13px;
-			line-height:1;
+			line-height:1.4em;
 		}
 		.dynamics-savings-calculator-result-value {
 			font-size: 48px;
@@ -140,6 +140,8 @@
 	-webkit-align-items:center;
 	align-items:center;
 	margin-bottom:10px;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
 	
 }
 
@@ -230,4 +232,17 @@
 .dynamics-savings-calculator .calculate:focus {
 	outline:none;
 	background-color:#ff991d;
+}
+
+@media(max-width:960px){
+
+	.dynamics-savings-calculator-field .field-col-1,
+	.dynamics-savings-calculator-field .field-col-2{
+		-webkit-flex:1 1 100%;
+		-ms-flex:1 1 100%;
+		flex:1 1 100%;
+		width:100%;
+		padding:0;
+	}
+
 }

@@ -122,7 +122,7 @@ $(document).ready(function(){
 
     }
 
-    $(".dynamicsCalculatorSliderField").on("change",function(){
+    $(".dynamicsCalculatorSliderField").on("input",function(){
 
         dynamicsUpdateCalculatorTextFields();
         dynamicsCalculatorCaptureValues();
@@ -130,7 +130,7 @@ $(document).ready(function(){
 
     });
 
-    $(".dynamicsCalculatorTextField").on("change",function(){
+    $(".dynamicsCalculatorTextField").on("input",function(){
 
         dynamicsUpdateCalculatorSliders();
         dynamicsCalculatorCaptureValues();
