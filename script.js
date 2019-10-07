@@ -4,7 +4,7 @@ $(document).ready(function(){
         savingsCalculator_fieldiesCost = 0,
         savingsCalculator_fieldiesNumber = 0,
         savingsCalculator_boxesNumber = 0,
-        savingsCalculator_efficiency = 15,
+        savingsCalculator_efficiency = 100,
         savingsCalculator_errorRate = 5;
 
     var $savingsCalculator_meters,
@@ -47,7 +47,7 @@ $(document).ready(function(){
         if($resultCII.length) $resultCII.text(Math.round(results.CII).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         if($resultIncorrect.length) $resultIncorrect.text(Math.round(results.incorrect).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         if($resultMoneyWasted.length) $resultMoneyWasted.text(Math.round(results.moneyWasted).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-        if($resultExpectedSavings.length) $resultExpectedSavings.text(Math.round(results.CIwI - results.CII).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        if($resultExpectedSavings.length) $resultExpectedSavings.text('$' + Math.round(results.CIwI - results.CII).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         
     
         return true;
