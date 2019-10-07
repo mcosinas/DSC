@@ -255,7 +255,7 @@
 }
 .tooltip-icon {
 	color: #2aabe1;
-    font-size: 20px;
+    font-size: 18px;
     vertical-align: super;
 	opacity: 0.6;
 	cursor:pointer;
@@ -270,6 +270,12 @@
 .tooltip:focus .tooltip-text {
 	pointer-events: initial;
 	opacity:1;
+}
+
+@media(max-width:767px){
+	.dynamics-savings-calculator {
+		display:block;
+	}
 }
 
 @media(max-width:960px){
