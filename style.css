@@ -1,3 +1,7 @@
+.dynamics-savings-calculator {
+	text-align:left;
+}
+
 .dynamics-savings-calculator *{
 	box-sizing:border-box;
 }
@@ -121,6 +125,7 @@
 
 			display:block;
 			font-size:13px;
+			line-height:1.2em;
 		
 		}
 		
@@ -137,7 +142,7 @@
 			
 		}
 		
-		.dynamics-savings-calculator .col2 h2 {margin-top:0; font-size:32px;}
+		.dynamics-savings-calculator .col2 h2 {margin-top:0; font-size:32px; color:#fff;}
 		
 		.dynamics-savings-calculator-result span {
 			
@@ -319,6 +324,7 @@
 		flex:1 1 100%;
 		width:100%;
 		padding:0;
+		margin:10px 0;
 	}
 
 }
