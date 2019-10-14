@@ -6,6 +6,19 @@
 	box-sizing:border-box;
 }
 
+.dynamics-savings-calculator-title {
+	width:1000px;
+	margin:30px auto;
+	max-width:100%;
+	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+}
+.dynamics-savings-calculator-title h2{	
+    color: #343434;
+    font-weight: normal;
+	font-size: 36px;
+	margin:0;
+	padding:0;
+}
 		
 .slidecontainer {
   width: 100%;
@@ -31,6 +44,9 @@
   background: #ffd300;
   cursor: pointer;
 }
+.dynamics-savings-calculator.imago .slider::-webkit-slider-thumb{
+	background-color:#e30073;
+}
 .slider::-webkit-slider-thumb::after{
 	content:" ";
 	display:block;
@@ -38,6 +54,9 @@
 	height:400px;
 	background-color:#ffd300;
 	position: absolute;
+}
+.dynamics-savings-calculator.imago .slider::-webkit-slider-thumb::after{
+	background-color:#e30073;
 }
 
 .slider::-moz-range-thumb {
@@ -47,10 +66,15 @@
   background: #ffd300;
   cursor: pointer;
 }
-
+.dynamics-savings-calculator.imago .slider::-moz-range-thumb{
+	background-color:#e30073;
+}
 
 .slider::-moz-range-progress {
 	background-color: #ffd300; 
+}
+.dynamics-savings-calculator.imago .slider::-moz-range-progress{
+	background-color:#e30073;
 }
 .slider::-moz-range-track {  
 	background-color: #ccc;
@@ -58,6 +82,9 @@
 /* IE*/
 .slider::-ms-fill-lower {
 	background-color: #ffd300; 
+}
+.dynamics-savings-calculator.imago .slider::-ms-fill-lower{
+	background-color:#e30073;
 }
 .slider::-ms-fill-upper {  
 	background-color: #ccc;
@@ -106,6 +133,9 @@
 	z-index: 0;
 	pointer-events: none;
 }
+.dynamics-savings-calculator.imago .input-range-progress{
+	background-color:#e30073;
+}
 		
 		
 		.dynamics-savings-calculator .col {
@@ -146,6 +176,10 @@
 			background-color:#241e20;
 			color:#fff;
 			
+		}
+
+		.dynamics-savings-calculator.imago .col2 {
+			background-color:#e30073;
 		}
 		
 		.dynamics-savings-calculator .col2 h2 {margin-top:0; font-size:32px; color:#fff;}
@@ -249,7 +283,7 @@
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	     appearance: none;
-	color:#241e20;
+	color:#fff;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	display:block;
@@ -264,10 +298,18 @@
 	font-weight:bold;
 }
 
+.dynamics-savings-calculator.imago .calculate{
+	background-color:#e30073;
+}
+
 .dynamics-savings-calculator .calculate:hover,
 .dynamics-savings-calculator .calculate:focus {
 	outline:none;
 	background-color:#ffdb2c;
+}
+.dynamics-savings-calculator.imago .calculate:hover,
+.dynamics-savings-calculator.imago .calculate:focus{
+	background-color:#e91882;
 }
 
 .tooltip {
