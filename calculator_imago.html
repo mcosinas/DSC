@@ -18,17 +18,17 @@
 
 <body>
 	
-	<div class="dynamics-savings-calculator">
+	<div class="dynamics-savings-calculator imago">
 		
 		<div class="col col1">
 			
-			<label>Core drilled <span class="tooltip"><span class="tooltip-text">Total expected length of core to be drilled during your campaign.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
+			<label>Drilled core <span class="tooltip"><span class="tooltip-text">Total expected length of core to be drilled during your campaign.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
 
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<div class="input"><span class="input-range-progress"></span><input id="savingsCalculator_meters" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="100000" value="0" step="1000"></div>
+					<input id="savingsCalculator_meters" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="100000" value="0" step="1000">		
 					
 				</div>
 				
@@ -41,13 +41,13 @@
 				
 			</div>
 
-			<label>All in cost of Field Techs <span class="tooltip"><span class="tooltip-text">Daily cost of personnel needed to photograph the core.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
+			<label>Cost of fieldies (inc. on cost and roster relief factors) <span class="tooltip"><span class="tooltip-text">Daily cost of personnel needed to photograph the core.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<div class="input"><span class="input-range-progress"></span><input id="savingsCalculator_fieldiesCost" class="slider dynamicsCalculatorSliderField" type="range" min="100" max="750" value="100" step="10"></div>
+					<input id="savingsCalculator_fieldiesCost" class="slider dynamicsCalculatorSliderField" type="range" min="100" max="750" value="100" step="10">
 					
 				</div>
 				
@@ -60,13 +60,13 @@
 				
 			</div>
 
-			<label># of Field Techs <span class="tooltip"><span class="tooltip-text">Number of personnel needed to move and photograph the core.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
+			<label>Number of fieldies <span class="tooltip"><span class="tooltip-text">Number of personnel needed to move and photograph the core.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<div class="input"><span class="input-range-progress"></span><input id="savingsCalculator_fieldiesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="40" value="0" >		</div>
+					<input id="savingsCalculator_fieldiesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="40" value="0" >		
 					
 				</div>
 				
@@ -79,13 +79,13 @@
 				
 			</div>
 			
-			<label>Trays photographed per day <b><i>without Tru Identiti</i></b> <span class="tooltip"><span class="tooltip-text">Average number of trays that are being photographed under current conditions per day.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
+			<label>Number of trays processed without Imago (per day) <span class="tooltip"><span class="tooltip-text">Average number of trays that are being photographed under current conditions per day.</span><span class="tooltip-icon">&#x1F6C8;</span></span></label>
 			
 			<div class="dynamics-savings-calculator-field">
 				
 				<div class="field-col field-col-1">
 					
-					<div class="input"><span class="input-range-progress"></span><input id="savingsCalculator_boxesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="500" value="0" ></div>
+					<input id="savingsCalculator_boxesNumber" class="slider dynamicsCalculatorSliderField" type="range" min="0" max="500" value="0" >
 					
 				</div>
 				
@@ -137,7 +137,7 @@
 			</div>
 
 			
-			<div class="input"><input type="button" class="calculate" value="Get results"></div>
+			<input type="button" class="calculate" value="Get results">
 			
 			
 		</div>
@@ -147,17 +147,17 @@
 			<h2>Results</h2>
 			
 			<div class="dynamics-savings-calculator-result">
-				<span class="dynamics-savings-calculator-result-label">Cost of photograph without TRU IDENTITI</span>
+				<span class="dynamics-savings-calculator-result-label">Cost to image without Imago</span>
 				<span id="dynamics-savings-calculator-result-CIwI" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 			<div class="dynamics-savings-calculator-result">
-				<span class="dynamics-savings-calculator-result-label">Cost of photograph with TRU IDENTITI</span>
+				<span class="dynamics-savings-calculator-result-label">Cost to image with Imago</span>
 				<span id="dynamics-savings-calculator-result-CII" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
 			<div class="dynamics-savings-calculator-result">
-				<span class="dynamics-savings-calculator-result-label">Images that are missing or difficult<br>to use without TRU IDENTITI</span>
+				<span class="dynamics-savings-calculator-result-label">Images that are missing or incorrectly taken without Imago</span>
 				<span id="dynamics-savings-calculator-result-incorrect" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			
@@ -167,7 +167,7 @@
 			</div>
 
 			<div class="dynamics-savings-calculator-result">
-				<span class="dynamics-savings-calculator-result-label dynamics-savings-calculator-result-label-savings">EXPECTED SAVINGS</span>
+				<span class="dynamics-savings-calculator-result-label">Expected savings</span>
 				<span id="dynamics-savings-calculator-result-expectedSavings" class="dynamics-savings-calculator-result-value">--</span>
 			</div>
 			

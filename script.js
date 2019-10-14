@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var savingsCalculator_meters = 0,
-        savingsCalculator_fieldiesCost = 0,
+        savingsCalculator_fieldiesCost = 100,
         savingsCalculator_fieldiesNumber = 0,
         savingsCalculator_boxesNumber = 0,
         savingsCalculator_efficiency = 100,
@@ -20,6 +20,8 @@ $(document).ready(function(){
         $savingsCalculator_boxesNumber_text;
 
     var $dynamicsSavingsCalculator = $(".dynamics-savings-calculator").first();
+
+    var $sliderProgressBars = $('.input-range-progress');
 
     $savingsCalculator_meters = $("#savingsCalculator_meters"),
     $savingsCalculator_fieldiesCost = $("#savingsCalculator_fieldiesCost"),
@@ -120,6 +122,22 @@ $(document).ready(function(){
         savingsCalculator_efficiency = $savingsCalculator_efficiency[0].value;
         savingsCalculator_errorRate = $savingsCalculator_errorRate[0].value;
 
+        dynamicsCalculatorUpdateSliderProgress();
+
+    }
+
+    function dynamicsCalculatorUpdateSliderProgress(){
+
+        $sliderProgressBars.each(function(){
+
+            var $t = $(this),
+                input = $t.siblings("input").get(0),
+                progress = ((input.value - input.min) / (input.max - input.min)) * 100;
+
+            $t.css('width', progress + '%');
+
+        });
+
     }
 
     $(".dynamicsCalculatorSliderField").on("input",function(){
@@ -164,5 +182,7 @@ $(document).ready(function(){
         
 
     });
+
+    dynamicsCalculatorUpdateSliderProgress();
 
 });

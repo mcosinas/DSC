@@ -2,9 +2,8 @@
 	box-sizing:border-box;
 }
 
-.slider {margin-bottom:2.5em;}
 		
-		.slidecontainer {
+.slidecontainer {
   width: 100%;
 }
 
@@ -14,14 +13,9 @@
   height: 4px;
   background: #ccc;
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
   cursor: pointer;
-}
-
-.slider:hover {
-  opacity: 1;
+  margin:0;
+  display:block;
 }
 
 .slider::-webkit-slider-thumb {
@@ -30,7 +24,7 @@
   width: 20px;
   height: 20px;
 	border-radius:20px;
-  background: #2aabe1;
+  background: #ffd300;
   cursor: pointer;
 }
 .slider::-webkit-slider-thumb::after{
@@ -38,7 +32,7 @@
 	display:block;
 	width:100px;
 	height:400px;
-	background-color:dodgerblue;
+	background-color:#ffd300;
 	position: absolute;
 }
 
@@ -46,20 +40,20 @@
   width: 20px;
   height: 20px;
   border-radius:20px;
-  background: #2aabe1;
+  background: #ffd300;
   cursor: pointer;
 }
 
 
 .slider::-moz-range-progress {
-	background-color: #2aabe1; 
+	background-color: #ffd300; 
 }
 .slider::-moz-range-track {  
 	background-color: #ccc;
 }
 /* IE*/
 .slider::-ms-fill-lower {
-	background-color: #2aabe1; 
+	background-color: #ffd300; 
 }
 .slider::-ms-fill-upper {  
 	background-color: #ccc;
@@ -72,7 +66,7 @@
 			align-items:stretch;
 			background-color:#fff;
 			border-radius:40px;
-			width:1200px;
+			width:1000px;
 			max-width:100%;
 			margin:50px auto 0;
 			overflow:hidden;
@@ -83,7 +77,29 @@
 			
 		}
 
-		.dynamics-savings-calculator input {margin-bottom:1.5em; max-width:100%;}
+.dynamics-savings-calculator .input {
+	max-width:100%;
+	position:relative;
+	opacity:0.7;
+	-webkit-transition: .2s;
+  	transition: opacity .2s;
+}
+.dynamics-savings-calculator .input:hover,
+.dynamics-savings-calculator .input:focus-within{
+	opacity:1;
+}
+
+.dynamics-savings-calculator .input-range-progress {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    height: 4px;
+    background-color: #ffd300;
+	z-index: 0;
+	pointer-events: none;
+}
 		
 		
 		.dynamics-savings-calculator .col {
@@ -91,6 +107,14 @@
 			flex: 1 1 50%;
 			padding:3em 2em;
 			
+		}
+
+		.dynamics-savings-calculator .col1 {
+			flex: 1 1 60%;
+		}
+
+		.dynamics-savings-calculator .col2 {
+			flex: 1 1 40%;
 		}
 
 		.dynamics-savings-calculator .col1 label {
@@ -108,7 +132,7 @@
 		
 		.dynamics-savings-calculator .col2 {
 			
-			background-color:#2aabe1;
+			background-color:#241e20;
 			color:#fff;
 			
 		}
@@ -125,12 +149,18 @@
 			font-size:13px;
 			line-height:1.4em;
 		}
+		.dynamics-savings-calculator-result-label-savings {
+			font-size:16px;
+			font-weight:bold;
+		}
 		.dynamics-savings-calculator-result-value {
 			font-size: 48px;
 			line-height: 1;
 			margin-bottom: 20px;
 			font-weight:300;
 		}
+
+		#dynamics-savings-calculator-result-expectedSavings {font-weight:bold;}
 
 .dynamics-savings-calculator-field {
 	
@@ -142,6 +172,7 @@
 	margin-bottom:10px;
 	-webkit-flex-wrap:wrap;
 	flex-wrap:wrap;
+	margin-bottom:1.5em;
 	
 }
 
@@ -211,10 +242,10 @@
 }
 
 .dynamics-savings-calculator .calculate {
-	background-color:#ff8c00;
+	background-color:#ffd300;
 	-webkit-appearance: none;
 	appearance: none;
-	color:#fff;
+	color:#241e20;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	display:block;
@@ -226,12 +257,13 @@
 	border-radius:50px;
 	cursor:pointer;
 	margin:2em 0 0 0;
+	font-weight:bold;
 }
 
 .dynamics-savings-calculator .calculate:hover,
 .dynamics-savings-calculator .calculate:focus {
 	outline:none;
-	background-color:#ff991d;
+	background-color:#ffdb2c;
 }
 
 .tooltip {
@@ -254,7 +286,7 @@
 	color: #fff;	
 }
 .tooltip-icon {
-	color: #2aabe1;
+	color: #241e20;
     font-size: 18px;
     vertical-align: super;
 	opacity: 0.6;
