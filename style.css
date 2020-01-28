@@ -236,11 +236,20 @@
     color:#fff
 }
 .tooltip-icon{
-    color:#241e20;
-    font-size:18px;
-    vertical-align:super;
-    opacity:.6;
-    cursor:pointer
+    display: inline-block;
+    border: 1px solid #000;
+    color: #000;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 15px;
+    font-size: 12px;
+    font-family: Times New Roman,serif;
+	font-weight: bold;
+	cursor:pointer;
+	opacity:0.6;
+	vertical-align:super
 }
 .tooltip:hover .tooltip-icon,.tooltip:focus .tooltip-icon{
     opacity:1
@@ -252,7 +261,17 @@
 @media(max-width:767px){
     .dynamics-savings-calculator{
         display:block
-    }
+	}
+	.tooltip-text {
+		position:static;
+		width:100%;
+		margin:10px 0;
+		display:none;
+		line-height:1.4em;
+	}
+	.tooltip:hover .tooltip-text, .tooltip:focus .tooltip-text{
+		display:block;
+	}
 }
 @media(max-width:960px){
     .dynamics-savings-calculator-field .field-col-1,.dynamics-savings-calculator-field .field-col-2{
